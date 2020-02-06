@@ -27,10 +27,19 @@
       </div>
       <div class="calendar-container">
         <img src="img/calendar.jpg" alt="Calendario" id="calendario"/>
+        <p onclick="calendario"></p>
       </div>
       <div class="opt-container">
 
       </div>
     </div>
+    <script type="text/javascript">
+      var calendario = document.getElementById("calendario");
+      function mensaje(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var mensaje = "X coords: " + x + ", Y coords: " + y;
+      }
+    </script>
   </body>
 </html>
