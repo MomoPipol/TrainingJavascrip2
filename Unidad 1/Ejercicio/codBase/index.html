@@ -26,8 +26,7 @@
         </div>
       </div>
       <div class="calendar-container">
-        <img src="img/calendar.jpg" alt="Calendario" id="calendario"/>
-        <p onclick="calendario"></p>
+        <img src="img/calendar.jpg" alt="Calendario" onclick="mensaje(event)" id="calendario"/>
       </div>
       <div class="opt-container">
 
@@ -39,6 +38,7 @@
         var x = event.clientX;
         var y = event.clientY;
         var mensaje = "X coords: " + x + ", Y coords: " + y;
+        console.log(mensaje);
       }
     </script>
   </body>
