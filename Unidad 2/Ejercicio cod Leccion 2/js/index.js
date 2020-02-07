@@ -14,9 +14,13 @@ document.getElementById('boton-perfil').addEventListener("click", function(){
       var HistoriaClinica2=["Apendicitis","22/8/2015"]
       var HistoriaClinica3=["Insuficiencia Renal","1/3/2013"],
 
-      obtenerEdad:function(){},
+      obtenerEdad:function(){
+        var hoy = new Date();
+        var edad = hoy.getFullYear()-this.fechaNacimiento.getFullYear();
+        return obtenerEdad;
+      },
 
       obtenerPeso:function(){}
 
-    }    
+    }
 })
