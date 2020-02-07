@@ -7,18 +7,12 @@ document.getElementById('boton-perfil').addEventListener("click", function(){
     Peso: 68,
     Estatura: 1.76,
     FechaDeNac: New Date(Apr 02 1979)
-
-    libros: [
-      {
-        titulo: 'Africanus, el hijo del cónsul',
-        trilogia:'Escipion'
-      },
-      {
-        titulo: 'Las Legiones Malditas',
-        trilogia:'Escipion'
+    Var UltimasConsultas = {
+        FechaConsulta: 'Fecha: 23 Junio 2016'
+        var consulta=['El paciente no presenta signos de dolor en las cicatrices de la cirugía','Se mencionan repetidos dolores en la zona abdominal'];
       }
-    ]
-  }
+
+    }
 
 
 
