@@ -19,10 +19,10 @@ var valorTotal = 0
 
 // Algoritmo de calculo
 
-
+realizarCalculo function(Pedido, Callback) {
 for (var indice in Pedido.productos) {
   resultado = resultado + (Pedido.precios[indice] * Pedido.cantidad[indice])
-}
+  }
 
 valorTotal = resultado + (resultado * IVA)
 
@@ -32,10 +32,17 @@ if (valorTotal > 10000) {
   premio = "No tiene derecho a un premio"
 }
 
+var mensaje= "Señor(a):"+Pedido.cliente+" , el valor total de su pedido es " + resultado + " y aplicando el iva el total es: "+valorTotal+" y debido al valor de tu compra: "+premio)
+callback (mensaje)
 
+function callbackAviso (mensaje){
+  alert(mensaje)
+}
+}
 var button1 = document.getElementById('calculo1')
 button1.addEventListener('click', function(){
 
+realizarCalculo(Pedido1,Callback)
   // Aqui debes llamar la funcion realizarCalculo y enviarle como argumento el primer pedido y el callback que se definio como funcion
 
 
@@ -44,6 +51,9 @@ button1.addEventListener('click', function(){
 var button2 = document.getElementById('calculo2')
 button2.addEventListener('click', function() {
 
+realizarCalculo (Pedido2, fuction(mensaje){
+  alert(mensaje)
+})
   // Aqui debes llamar la funcion realizarCalculo y enviarle como argumento el segundo pedido y un callback como funcion anonima
 
 })

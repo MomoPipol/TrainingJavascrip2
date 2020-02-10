@@ -10,14 +10,20 @@ var resultado = 0
 var premio = ""
 var valorTotal = 0
 
-// Algoritmo de calculo
+for (var i in Pedido.productos) {
+  resultado = resultado + (Pedido.precios[i]*Pedido.cantidad[i])
+}
 
+valorTotal = resultado + (resultado * IVA)
 
+if (valorTotal >100000) {
+premio="Tiene derecho a un premio"
+} else {
+  premio="Tiene derecho a un premio"
+}
 
 var button = document.getElementById('calculo')
 button.addEventListener('click', function(){
-
-  // Aqui debes poner tu alerta
-  
+  alert( "Señor(a):"+Pedido.cliente+" , el valor total de su pedido es " + resultado + " y aplicando el iva el total es: "+valorTotal+" y debido al valor de tu compra: "+premio)
 
 })
