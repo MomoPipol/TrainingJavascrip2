@@ -10,7 +10,7 @@ Calculadora = {
   resultado:0,
   igual:false,
 
-/*luego del resultado puedo seguir agregando numeros.*/
+
   init: (function(){
     this.teclas();
     this.calculador();
@@ -52,7 +52,7 @@ Calculadora = {
 		document.getElementById("mas").addEventListener("click", function() {Calculadora.operador("+");});
 
   },
-//ON/C //Solo un 0 y remplazar 0?
+//ON/C //
 
   inicio:function(){
     this.valores="0";
@@ -66,11 +66,31 @@ Calculadora = {
 
   },
 
+	//DECIMALES
 
+decimal:function(){
+	if(this.valores.indexOf(".") == -1){
+		if(this.valores == ""){
+			this.valores=this.valores + "0.";
+		}else{
+		this.valores = this.valores + ".";
+	}
+		this.actualizar();
+	}
+	},
 
-//DECIMALES
+//Negativo
+unitary:function(){
+if (this.valores!= "0" && this.valores.indexOf("-") == -1){
+this.valores = "-" + this.valores;
+} else if (this.valores.indexOf("-") == 0) {
+	this.valores = this.valores.slice(1);
+} else {
+this.valores = this.valores;
+}
 
-//UNARIO
+	this.actualizar();
+},
 
 //HACIENDO
 numero: function(valor) {
@@ -134,4 +154,3 @@ ejecuta:function(var1,var2,operaciones){
 
 } ;
 Calculadora.init();
-//https://www.w3schools.com/code/tryit.asp?filename=GDN2TDROJN74
